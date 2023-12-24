@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     public int maxHealth = 1; // The maximum health of the enemy
     public float moveSpeed = 1.5f; // The movement speed of the enemy
     public float rotSpeed = 20f;
+    Animator playAnim;
 
     ZombieSpawner zombieSpawner;
     private int currentHealth; // The current health of the enemy
@@ -21,6 +22,7 @@ public class EnemyBehavior : MonoBehaviour
     currentHealth = maxHealth;
     isAttacking = false;
     isDead = false;
+    playAnim = gameObject.GetComponent<Animator>();
 }
 void Update()
 {
@@ -31,10 +33,14 @@ void Update()
     if (distanceToPlayer <= attackDistance)
     {
         isAttacking = true;
+        playAnim.SetBool("Punch", true);
+        playAnim.SetBool("Walking", false);
     }
     else
     {
         isAttacking = false;
+        playAnim.SetBool("Punch", false);
+        playAnim.SetBool("Walking", true);
     }
 
     // If the enemy is not attacking, move towards the player
@@ -44,7 +50,6 @@ void Update()
         Vector3 direction = (Camera.main.transform.position - transform.position).normalized;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotSpeed * Time.deltaTime);
-
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 }

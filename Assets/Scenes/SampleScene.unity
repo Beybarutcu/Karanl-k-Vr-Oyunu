@@ -1983,6 +1983,7 @@ MonoBehaviour:
   minSpawnTime: 2
   maxSpawnTime: 4
   levelnumber: 1
+  zombies: []
 --- !u!4 &1499560661
 Transform:
   m_ObjectHideFlags: 0
