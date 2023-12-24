@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -28,8 +29,7 @@ void Start()
     
     public void Quit() {
         
-        Application.Quit();
-        Debug.Log("Öldün");
+        SceneManager.LoadScene(0);
     }
 void Update()
 {
