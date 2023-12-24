@@ -1267,7 +1267,7 @@ Animator:
   m_GameObject: {fileID: 137588}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 85d3b565abb071445a6cfbedc477ac94, type: 3}
-  m_Controller: {fileID: 9100000, guid: b7a323149faef7d4aa46b18556e42559, type: 2}
+  m_Controller: {fileID: 9100000, guid: 05c3b37bb9db8f8448f5b926729267f6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1294,36 +1294,6 @@ MonoBehaviour:
   maxHealth: 1
   moveSpeed: 2
   rotSpeed: 0
-<<<<<<< HEAD
---- !u!54 &4837732863240004339
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137588}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 0
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
-=======
->>>>>>> 5e789a931b2952a3983896e1827111ec82b46228
 --- !u!136 &8721207020396950269
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1370,7 +1340,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0

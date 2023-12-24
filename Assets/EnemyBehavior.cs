@@ -33,12 +33,14 @@ void Update()
     if (distanceToPlayer <= attackDistance)
     {
         isAttacking = true;
+        transform.LookAt(Camera.main.transform.position);
         playAnim.SetBool("Punch", true);
         playAnim.SetBool("Walking", false);
     }
     else
     {
         isAttacking = false;
+        transform.LookAt(Camera.main.transform.position);
         playAnim.SetBool("Punch", false);
         playAnim.SetBool("Walking", true);
     }
