@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
@@ -16,14 +17,20 @@ public class EnemyBehavior : MonoBehaviour
     private bool isAttacking; // Whether the enemy is currently attacking
     private bool isDead; // Whether the enemy is dead
 
-    void Start()
-{
-    zombieSpawner = FindObjectOfType<ZombieSpawner>();
-    currentHealth = maxHealth;
-    isAttacking = false;
-    isDead = false;
-    playAnim = gameObject.GetComponent<Animator>();
-}
+void Start()
+    {
+        zombieSpawner = FindObjectOfType<ZombieSpawner>();
+        currentHealth = maxHealth;
+        isAttacking = false;
+        isDead = false;
+        playAnim = gameObject.GetComponent<Animator>();
+    }
+    
+    public void Quit() {
+        
+        Application.Quit();
+        Debug.Log("Öldün");
+    }
 void Update()
 {
     if (isDead) return;
@@ -36,6 +43,7 @@ void Update()
         transform.LookAt(Camera.main.transform.position);
         playAnim.SetBool("Punch", true);
         playAnim.SetBool("Walking", false);
+        Quit();
     }
     else
     {

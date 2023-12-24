@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409e7164ffc93414ebb6708de7815186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfBullet: 8
+  numberOfBullet: 500
 --- !u!54 &1489121637
 Rigidbody:
   m_ObjectHideFlags: 0
