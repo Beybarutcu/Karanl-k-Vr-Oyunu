@@ -1290,9 +1290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e1763a3431428498a0d5724357b1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 5
+  attackDistance: 2
   maxHealth: 1
-  moveSpeed: 2
+  moveSpeed: 1.5
   rotSpeed: 0
 --- !u!136 &8721207020396950269
 CapsuleCollider:

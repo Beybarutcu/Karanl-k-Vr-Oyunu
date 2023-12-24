@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ZombieSpawner : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ZombieSpawner : MonoBehaviour
     private int spawnCount = 1;
     private int zombieLimit;
     public List<GameObject> zombies;
+    public TMP_Text levelText;
 
     void Start()
     {
@@ -49,8 +51,10 @@ public class ZombieSpawner : MonoBehaviour
 
         if (zombies.Count == 0)
         {
+
             spawnCount = 0;
             levelnumber++;
+            levelText.text = "Level " + levelnumber;
             InvokeRepeating("SpawnZombie",2.0f,1.4f);
         }
     }
