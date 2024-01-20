@@ -834,8 +834,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: "Karanl\u0131k Vr Oyunu"
-  metroPackageVersion: 
+  metroPackageName: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -843,7 +843,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: "Karanl\u0131k Vr Oyunu"
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: "Karanl\u0131k Vr Oyunu"
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

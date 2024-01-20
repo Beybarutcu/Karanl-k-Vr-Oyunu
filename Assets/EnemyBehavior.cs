@@ -43,7 +43,7 @@ void Update()
         transform.LookAt(Camera.main.transform.position);
         playAnim.SetBool("Punch", true);
         playAnim.SetBool("Walking", false);
-        Quit();
+        Invoke("Quit", 2.0f);
     }
     else
     {
