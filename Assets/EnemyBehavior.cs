@@ -41,7 +41,7 @@ void Update()
     if (distanceToPlayer <= attackDistance)
     {
         isAttacking = true;
-        transform.LookAt(Camera.main.transform.position);
+        transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
         playAnim.SetBool("Punch", true);
         playAnim.SetBool("Walking", false);
         Invoke("Quit", 2.0f);
@@ -49,7 +49,7 @@ void Update()
     else
     {
         isAttacking = false;
-        transform.LookAt(Camera.main.transform.position);
+        transform.LookAt(new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z));
         playAnim.SetBool("Punch", false);
         playAnim.SetBool("Walking", true);
     }
@@ -57,7 +57,7 @@ void Update()
     // If the enemy is not attacking, move towards the player
     if (!isAttacking)
     {
-        Vector3 targetPosition = new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z);
+        Vector3 targetPosition = new Vector3(Camera.main.transform.position.x, 0, Camera.main.transform.position.z);
         Vector3 direction = (new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z) - transform.position).normalized;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotSpeed * Time.deltaTime);
